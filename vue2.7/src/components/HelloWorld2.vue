@@ -1,16 +1,25 @@
 <template>
   <div>
     <h3>{{ num }}</h3>
-    <button @click="add">增加+1</button>
+    <button @click="add">增加+2</button>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
-const num = ref(18)
-function add() {
-  num.value++
-}
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+export default defineComponent({
+  setup() {
+    const num = ref(18)
+    function add() {
+      num.value += 2
+    }
+
+    return {
+      num,
+      add,
+    }
+  },
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
