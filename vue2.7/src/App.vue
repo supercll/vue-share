@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="1"/>
     <HelloWorld2 msg="2"/>
+    <CssBind />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import Vue from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
 import HelloWorld2 from './components/HelloWorld2.vue';
+import CssBind from './components/CssBind.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
     HelloWorld,
-    HelloWorld2
+    HelloWorld2,
+    CssBind
   }
 });
 </script>
